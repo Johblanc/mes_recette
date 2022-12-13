@@ -8,9 +8,19 @@ import { InfoBox } from './customs/maquette/infobox';
 function App() {
   return (
     <div className="App">
-        <InfoBox data={MAQUETTE}/>
+
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+/*InfoBox data={MAQUETTE}*/
