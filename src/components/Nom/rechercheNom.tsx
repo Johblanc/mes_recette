@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 
 export function RechercheNom() {
@@ -11,9 +11,9 @@ export function RechercheNom() {
         }
         fetchData();
 
-    }, [] );
+    }, []);
 
-    
+
     return (
         <div>
             <form>
