@@ -18,9 +18,11 @@ export function InfoBox(props : {data : TMaquetteObject}){
     const childrens = props.data.children?.map(
         (item,i) => <InfoBox key={i} data={item}/>
     ) 
+
     const links = props.data.liens?.map(
         (item,i) => <a key={i} href={item.url}>{item.titre}</a>
     ) 
+    
     links?.unshift(<p>Liens : </p>)
 
     return (

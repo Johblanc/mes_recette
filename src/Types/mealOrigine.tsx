@@ -1,6 +1,5 @@
 export type TOriginalMeal = {
-  meals: [
-    {
+  meals: {
       idMeal: string,
       strMeal: string,
       strDrinkAlternate: string | null,
@@ -54,6 +53,6 @@ export type TOriginalMeal = {
       strImageSource: string | null,
       strCreativeCommonsConfirmed: string | null,
       dateModified: string | null
-    }
-  ]
+    }[]
+  
 }

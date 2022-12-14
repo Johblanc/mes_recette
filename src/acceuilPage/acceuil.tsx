@@ -1,13 +1,17 @@
 import React from "react"
 
-function App() {
-    return<Acceuil {...acceuilData}/>;
+export type TPropsAcceuil = {
+    overLaGroup : string    , 
+    headerTitre : string, 
+    sousTitre : string, 
+    bouttonChercher : string, 
+    recettesYummy : string, 
+    poke1 : string, 
+    poke1Props : string
 }
 
-export default App;
-
-function Acceuil(props) {
-    const {overLaGroup, headerTitre, sousTitre, bouttonChercher, recettesYummy, time, poke1, poke12, poke1Props } = props;
+function Acceuil(props : TPropsAcceuil) {
+    const {overLaGroup, headerTitre, sousTitre, bouttonChercher, recettesYummy, poke1 } = props;
 
     return(
         <div className="container-center-horizontal">
@@ -17,14 +21,14 @@ function Acceuil(props) {
         <div className="effect"></div>   
         <div className="content">
             <div className="text">
-             <h1 className="header-titre">{headerTitre}</h1>
+                <h1 className="header-titre">{headerTitre}</h1>
             <div className="sous-titre">
         {sousTitre}
             </div>
 
 
 
-                <</div>         
+                </div>         
 
                 </div>
                 <img className="boutton-chercher" src={bouttonChercher} alt="boutton chercher"/>
@@ -32,7 +36,7 @@ function Acceuil(props) {
                 <div className="recettes-yummy">
                     {recettesYummy}
                 </div>
-                <Poke1 src={poke1Props.src} />
+                <Poke1 src={poke1} />
                 </div>
                 </div>
     );

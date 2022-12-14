@@ -31,11 +31,11 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
                 <li key= { index } >
                     <a
                         href="#" 
-                        className = {selectedCategory === category ? 'active' : ''} >
+                        className = {selectedCategory === category ? 'active' : ''}
+                    >
                             { category }
-                        </a>
-    
-    </li>
+                    </a>
+                </li>
             )
 
         }
@@ -47,16 +47,19 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
             <nav>
                 <ul>
                     {
-        categories.map((category) => {
-            <li key= { category } >
-            <a href="#" className = { selectedCategory === category ? 'active' : ''} 
-            onClick = {() => onSelectCategory(category)}>
-    { category }
-    < /a>
-    < /li>
-                    })
+                        categories.map(
+                            (category,index) =>                          
+                            
+                            <li key= { index } >
+                                <a>
+                                </a>
+                            </li>
+                            
+                            
+                        )
+                    }
                 </ul>
-            < /nav>
-        < /header>
+            </nav>
+        </header>
     );
 };
