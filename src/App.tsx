@@ -2,13 +2,14 @@
 
 import './App.css';
 import './customs/maquette/maquette.css';
-import MAQUETTE from "./customs/maquette/structure.json"
-import { InfoBox } from './customs/maquette/infobox';
+import { RechercheNom } from './components/Nom/rechercheNom';
+import { SearchByCat} from './components/Categorie/SearchByCat';
 
 function App() {
   return (
     <div className="App">
-
+        <RechercheNom /> 
+        <SearchByCat/>
     </div>
   );
 }
