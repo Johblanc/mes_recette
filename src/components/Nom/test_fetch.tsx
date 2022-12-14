@@ -75,14 +75,34 @@ export function RechercheNom2() {
         fetchData();
 
     }, [] );
+
+    type teee = {
+        testA? : string,
+        testB? : string
+    }
+
+    let a : teee = {
+        testA : "",
+        testB : "666"
+    };
+
+    let testComplet = a.testA && a.testB
+    console.log("test :",testComplet);
+    
     
     return (
         <div>
             <form>
                 <input type="text" placeholder="saisir nom" ></input>
                 <button type="submit"></button>
-                {dataAPI.meals.map( (item,i) => <p key={i}>{item.strMeal}</p>)}
+                {testComplet && 
+                <div>
+                    <p>Liste :</p>
+                    <p>{a.testA}</p>
+                    <p>{a.testB}</p>
+                </div>}
             </form>
         </div>
     )
-}
+}/*
+{dataAPI.meals.map( (item,i) => <p key={i}>{item.strMeal}</p>)}*/
