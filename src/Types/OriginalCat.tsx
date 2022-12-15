@@ -13,6 +13,6 @@ export type Cat = {
   id         :    string,
   categorie  :    string,
   imgSrc     :    string | null,
-  description:    string|null
+  description:    string | null
 
 }

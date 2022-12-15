@@ -1,5 +1,4 @@
 
-
 import './App.css';
 import './customs/maquette/maquette.css';
 import { RechercheNom } from './components/Nom/rechercheNom';
@@ -8,6 +7,7 @@ import { TestConvertObject } from './components/Nom/test_object';
 import { Category } from './components/categorie/Category';
 import { NavBar } from './components/header/NavBar';
 import "./NavBar.css";
+import { HandleCategory } from './components/categorie/FilterByCategory';
 
 function App() {
   return (
@@ -16,6 +16,9 @@ function App() {
       <RechercheNom />
       <TestConvertObject /> */}
       <Category />
+      <HandleCategory/>
+    
+    
 
     </div>
   );
