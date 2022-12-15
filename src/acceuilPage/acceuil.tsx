@@ -21,7 +21,7 @@ function Acceuil(props : TPropsAcceuil) {
         <div className="effect"></div>   
         <div className="content">
             <div className="text">
-                <h1 className="header-titre">{headerTitre}</h1>
+            <h1 className="header-titre">{headerTitre}</h1>
             <div className="sous-titre">
         {sousTitre}
             </div>

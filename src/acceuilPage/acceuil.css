@@ -41,5 +41,127 @@
 }
 
 .star-1 {
-    background-color: yellow;
+    height: 14px;
+    left: 90px;
+    position: absolute;
+    top: 57px;
+    width: 15px;
 }
+
+.effect {
+    background: linear-gradient(180deg, rgb(0, 0, 0) 99.99%, rgba(0, 0, 0, 0) 100%);
+    height: 416px;
+    left: 0;
+    position: absolute;
+    top: 396px;
+    width: 375px;
+}
+
+.content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    left: 44px;
+    min-height: 245px;
+    position: absolute;
+    top: 481px;
+    width: 287px;
+}
+
+.text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-height: 153px;
+    width: 291px
+}
+
+.header-titre {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 60px;
+    margin-right: 4px;
+    text-align: center;
+    width: 287px;
+}
+
+.sous-titre {
+    color: #fafafa;
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    margin-right: 3px;
+    min-width: 252px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.boutton-chercher {
+    height: 126px;
+    margin-left: -3px;
+    width: 294px;
+}
+
+.recettes-yummy {
+    color: let(--white);
+    font-family: let(--font-family-poppins);
+    font-size: let(--font-size-m);
+    font-weight: 600;
+    left: 115px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: 52px;
+    white-space: nowrap;
+}
+
+.status_-bar {
+    align-items: center;
+    display: flex;
+    gap: 224px;
+    height: 44px;
+    justify-content: flex-end;
+    left: 0;
+    min-width: 375px;
+    padding: 0 13.5px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+
+.rectangle {
+    background-color: let(--white);
+    border-radius: 1.6px;
+    height: 10px;
+    width: 20px
+}
+
+.home-indicator {
+    align-items: flex-end;
+    display: flex;
+    height: 34px;
+    left: 0;
+    min-width: 375px;
+    padding: 8px 120px;
+    position: fixed;
+    top: 778px;
+    z-index: 3;
+}
+
+.poke1{
+        height: 510px;
+        left: 6px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 363px;
+    }
