@@ -4,8 +4,8 @@ import { SearchByIngredients } from './components/ingredients/SearchByIngredient
 import './customs/maquette/maquette.css';
 import { TestConvertObject } from './components/Nom/test_object';
 import { NavBar } from './components/header/NavBar';
-import { RechercheNom } from './components/Nom/rechercheNom';
 import { FilterByCategory } from './components/categorie/searchByCategory';
+import { RechercheNom } from './components/Nom/RechercheNom';
 function App() {
 
   
