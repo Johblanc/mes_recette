@@ -1,6 +1,7 @@
 
 
 import './App.css';
+import { SearchByIngredients } from './components/ingredients/SearchByIngredients';
 import './customs/maquette/maquette.css';
 
 function App() {
@@ -13,3 +14,13 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+/*InfoBox data={MAQUETTE}*/
