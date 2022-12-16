@@ -34,10 +34,9 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
                         className = {selectedCategory === category ? 'active' : ''}
                     >
                             { category }
-                    </a>
-                </li>
-            )
-
+                        </a>
+    </li>)
+            
         }
         
     )
@@ -46,18 +45,7 @@ const Header: React.FunctionComponent<Props> = (props: Props) => {
         <header>
             <nav>
                 <ul>
-                    {
-                        categories.map(
-                            (category,index) =>                          
-                            
-                            <li key= { index } >
-                                <a>
-                                </a>
-                            </li>
-                            
-                            
-                        )
-                    }
+                    {}
                 </ul>
             </nav>
         </header>
