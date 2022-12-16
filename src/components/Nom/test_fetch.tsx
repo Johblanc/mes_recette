@@ -62,12 +62,15 @@ export function RechercheNom2() {
                 }
             ]
         }
-    )
+    );
     useEffect(() => {
         async function fetchData() {
             const response = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=b");
-            
+            console.log(response);
+                       
             const responseJson = await response.json();
+            console.log(responseJson);
+            
             setDataAPI(responseJson);
             
 
