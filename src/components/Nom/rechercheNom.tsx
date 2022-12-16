@@ -5,7 +5,8 @@ import { requestZero } from "./requestZero";
 
 export function RechercheNom(props: any) {
     const [dataAPI, setDataAPI] = useState(requestZero);
-    const [firstLetter, setFirstletter] = useState("e")
+    const [firstLetter, setFirstletter] = useState("e");
+    
 
     useEffect(() => {
         async function fetchData() {
@@ -31,14 +32,15 @@ export function RechercheNom(props: any) {
 
     }
     return (
-        <div>
+        <div >
             <form onSubmit={onNameValidate}>
-                <input type="text" placeholder="saisir nom" list="recettes" onChange={onNameChange}></input>
+                <input type="text" placeholder="saisir nom" list="recettes" onChange={onNameChange} className="font-weight-bold text-info bg-secondary"></input>
                 <datalist id="recettes">
-                    {dataAPI.meals.map((item, i) => <option key={i}> {item.strMeal}</option>)}
+                    {dataAPI.meals.map((item, i) => <option key={i} className="font-weight-bold text-info"> {item.strMeal}</option>)}
 
                 </datalist>
-                <button type="submit">valider</button>
+                <button type="submit" className="font-weight-bold text-info bg-secondary">valider</button>
+                
             </form>
         </div>
     )
