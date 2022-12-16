@@ -1,32 +1,47 @@
+h1 {
+    color:hsl(180, 33%, 99%);
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10%;
+    position:relative;
+    text-align: center;
+}
+
 nav {
 
     height: 50px;
-    background-color: linear-gradient(45deg rgb(69, 81, 69),rgb(51, 51, 54));
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
 
-li {
+.liste {
     margin:0;
     padding:0;
     list-style-type: none;
     background-color: linear-gradient(45deg rgb(69,81,69),rgb(51, 51, 54));
     height:100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
 }
 .items{
 
     margin-right:10px;
-    color:white;
+    color:black;
     cursor: pointer;
 }
 
-.btn{
-    display: none;
+.btn {
+    display:none;
+    justify-content: flex-end;
+
+
 }
+
 @media screen and(max-width:500px){
-    .li{
+
+    .liste{
         
         flex-direction: column;
         height:200px;
@@ -36,6 +51,7 @@ li {
         border-top:1px solid#fff;
         margin-top: 50px;
     }
+    
     .items{
         height: 50px;
         width: 100%;
@@ -48,7 +64,7 @@ li {
         position: absolute;
         right: 10px;
         top: 10px;
-        color:rgb(102, 232, 55);
+        color:rgb(24, 25, 24);
         cursor:pointer;
     }
     

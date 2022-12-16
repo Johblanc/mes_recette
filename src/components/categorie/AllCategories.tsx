@@ -35,10 +35,9 @@ export function Category() {
 
     return (
         <div>
-            <p>Recherche par catégorie</p>
+            <p>Catégorie</p>
             <input className="inputMeal" type="text" placeholder="Select a category" />
             {meal.categories.map((item, i) => <p key={i}>{item.strCategory}</p>)}
-
             <button>Soumettre</button>
         </div>
     )

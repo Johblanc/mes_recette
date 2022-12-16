@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Cat, OriginalCat } from "../../Types/OriginalCat";
+import { OriginalCat, Cat, TOriginalRequestCat} from "../../Types/OriginalCat";
 import { TMeal } from '../../Types/mealOrigine';
 import { stringify } from 'querystring';
-/* 
-export function FilterByCategory(genre: OriginalCat):Cat {
-    console.log("genre:",genre);
-     // l'utilisateur a selectionné sa catégorie
-     let result: Cat = { 
+import { choixUtilisateur } from './choixUtilisateur';
+
+export function SelectedCategory(genre: OriginalCat): Cat {
+    console.log("genre:", genre);
+    // l'utilisateur a selectionné sa catégorie
+    let result: Cat = {
 
         id: genre.idCategory,
         categorie: genre.strCategory,
@@ -14,20 +15,23 @@ export function FilterByCategory(genre: OriginalCat):Cat {
         description: genre.strCategoryDescription
 
     }
-    
     console.log("result :", result);
-}  */
-export function HandleCategory() { //extraire toutes les recettes de la categorie selectionnée
-
+    return result;
+};
+export function FilterByCategory(props: any) {
+    const [dataAPI, setDataAPI] = useState(choixUtilisateur);//extraire toutes les recettes de la categorie selectionnée
     const [result, setResult] = useState(
 
         {
             meals:
                 [
                     {
-                        strMeal: "",
-                        strMealThumb: "",
-                        idMeal: ""
+                        idCategory: "",
+                        strCategory: "",
+                        strCategoryThumb: "",
+                        strCategoryDescription: "",
+
+
                     }
                 ]
         }
@@ -35,7 +39,7 @@ export function HandleCategory() { //extraire toutes les recettes de la categori
     useEffect(() => {
 
         async function fetchData() {
-            const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood');
+            const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood${result}`);
             console.log(response);
 
             const responseJson = await response.json();

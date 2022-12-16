@@ -1,24 +1,18 @@
-
+import { Category } from './components/categorie/AllCategories';
 import './App.css';
 import './customs/maquette/maquette.css';
-import { RechercheNom } from './components/Nom/rechercheNom';
-import { RechercheNom2 } from './components/Nom/test_fetch';
 import { TestConvertObject } from './components/Nom/test_object';
-import { Category } from './components/categorie/Category';
 import { NavBar } from './components/header/NavBar';
-import "./NavBar.css";
-import { HandleCategory } from './components/categorie/FilterByCategory';
-
+import { RechercheNom } from './components/Nom/rechercheNom';
+import { FilterByCategory } from './components/categorie/searchByCategory';
 function App() {
   return (
     <div className="App">
-      {/* <NavBar />
-      <RechercheNom />
-      <TestConvertObject /> */}
+      <NavBar/>
+      <RechercheNom/> 
+      {/* <TestConvertObject /> */}
       <Category />
-      <HandleCategory/>
-    
-    
+      <FilterByCategory/>
 
     </div>
   );
