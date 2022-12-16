@@ -20,6 +20,9 @@ Dans notre maquette :
         . www.themealdb.com/api/json/v1/1/categories.php
         . Filter by Category
         . www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+    . par ingrédientcomit 
+        .www.themealdb.com/api/json/v1/1/list.php?i=list
+        .www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
     . par clé
         . Lookup full meal details by id
         . www.themealdb.com/api/json/v1/1/lookup.php?i=52772

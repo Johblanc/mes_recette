@@ -1,15 +1,29 @@
 
 
 import './App.css';
+import { SearchByIngredients } from './components/ingredients/SearchByIngredients';
 import './customs/maquette/maquette.css';
-import { RechercheNom } from './components/Nom/rechercheNom';
-import { RechercheNom2 } from './components/Nom/test_fetch';
+
 function App() {
   return (
     <div className="App">
-        <RechercheNom2 />
+      {// <NavBar />
+      <SearchByIngredients/>
+      /*<TestConvertObject />*/ }
+      {/*<Category />*/}
+
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+/*InfoBox data={MAQUETTE}*/
