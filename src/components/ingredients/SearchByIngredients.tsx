@@ -35,7 +35,7 @@ export function SearchByIngredients(){
             <form onSubmit={onNameValidate}>
                 <input type="text" placeholder="saisir un ingedient" list="recettes" onChange={onNameChange} />
                 <datalist id="recettes">
-                    {dataAPI.meals.map((item, i) => <option key={i}> {item.strMeal}</option>)}
+                    {dataAPI.meals?.map((item, i) => <option key={i}> {item.strMeal}</option>)}
 
                 </datalist>
                 <button type="submit">valider</button>

@@ -7,19 +7,24 @@ import { NavBar } from './components/header/NavBar';
 import { RechercheNom } from './components/Nom/rechercheNom';
 import { Category } from './components/categorie/AllCategories';
 import { FilterByCategory } from './components/categorie/searchByCategory';
-
+import { Accueil } from './components/acceuilPage/acceuil';
+import { useState } from 'react';
 function App() {
-
-
+  const [primePage, setPrimePage] = useState(false)
+  
   return (
     <div className="App">
-      <NavBar /> 
-      <TestConvertObject />
-      <RechercheNom />
-      <Category />
-      <FilterByCategory />
-   
-
+      <NavBar/>
+      {primePage && <Accueil overLaGroup={''} headerTitre={''} sousTitre={''} bouttonChercher={''} recettesYummy={''} poke1={'poke-1.png'} poke1Props={''}/>}
+      {!primePage && <div>
+        
+        <RechercheNom/> 
+        <p> ----------------------------------------------------- </p>
+        <Category />
+        <FilterByCategory/>
+        <p> ----------------------------------------------------- </p>
+        <SearchByIngredients/>
+      </div>}
     </div>
   );
 }
