@@ -10,7 +10,7 @@ export type TPropsAcceuil = {
     poke1Props: string;
 };
 
-function AcceuilBis(props: TPropsAcceuil) {
+export function AccueilBis(props: TPropsAcceuil) {
     const {
         overLaGroup,
         headerTitre,

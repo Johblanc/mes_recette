@@ -5,22 +5,30 @@ import { recetteZero } from "./recette0";
 export function Recette(props: { id: string }) {
     
     const [dataAPI, setDataAPI] = useState(convertMeal(recetteZero.meals[0]))
+    const [id, setId] = useState(props.id)
+    if (id) {
+        setId(props.id)
+    }
+    
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.id}`);
+            if (id){
+                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
 
-            const responseJson = await response.json();
+                const responseJson = await response.json();
 
-            setDataAPI(convertMeal(responseJson.meals[0]));
+                setDataAPI(convertMeal(await responseJson.meals[0]));
 
-
+            }
         }
         fetchData();
 
-    }, [])
+    }, [id])
     const listIngredients = dataAPI.ingredients.map(
         (item, i) => (<p key = {i}>{item.titre} : {item.dosage}</p>)
     )
+    console.log(id);
+    
     return (
         <>
         {listIngredients}
