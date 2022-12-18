@@ -19,7 +19,7 @@ Dans notre maquette :
         . List all meal categories
         . www.themealdb.com/api/json/v1/1/categories.php
         . Filter by Category
-        . www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
+        . www.themealdb.com/api/json/v1/1/filter.php?c=
     . par ingrédientcomit 
         .www.themealdb.com/api/json/v1/1/list.php?i=list
         .www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast

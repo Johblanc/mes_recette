@@ -1,10 +1,11 @@
-import { Category } from './components/categorie/AllCategories';
+
 import './App.css';
 import { SearchByIngredients } from './components/ingredients/SearchByIngredients';
 import './customs/maquette/maquette.css';
 import { TestConvertObject } from './components/Nom/test_object';
 import { NavBar } from './components/header/NavBar';
 import { RechercheNom } from './components/Nom/rechercheNom';
+import { Category } from './components/categorie/AllCategories';
 import { FilterByCategory } from './components/categorie/searchByCategory';
 import { Accueil } from './components/acceuilPage/acceuil';
 import { useState } from 'react';

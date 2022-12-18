@@ -1,37 +1,21 @@
 import { useEffect, useState } from 'react';
-import { OriginalCat, Cat, TOriginalRequestCat} from "../../Types/OriginalCat";
-import { TMeal } from '../../Types/mealOrigine';
-import { stringify } from 'querystring';
+import { TOriginalRequestMeal } from '../../Types/mealOrigine';
 import { choixUtilisateur } from './choixUtilisateur';
+import { FilterCatOrigine, FilterCatRequestOrigine, FilterCat } from '../../Types/filtreParCategorie'
 
-export function SelectedCategory(genre: OriginalCat): Cat {
-    console.log("genre:", genre);
-    // l'utilisateur a selectionné sa catégorie
-    let result: Cat = {
 
-        id: genre.idCategory,
-        categorie: genre.strCategory,
-        imgSrc: genre.strCategoryThumb,
-        description: genre.strCategoryDescription
+export function FilterByCategory() {
 
-    }
-    console.log("result :", result);
-    return result;
-};
-export function FilterByCategory(props: any) {
-    const [dataAPI, setDataAPI] = useState(choixUtilisateur);//extraire toutes les recettes de la categorie selectionnée
-    const [result, setResult] = useState(
+    const [dataAPI, setDataAPI] = useState(choixUtilisateur);
 
+    const [SelectCategory, setSelectCategory] = useState(
         {
             meals:
                 [
                     {
-                        idCategory: "",
-                        strCategory: "",
-                        strCategoryThumb: "",
-                        strCategoryDescription: "",
-
-
+                        strMeal: "",
+                        strMealThumb: "",
+                        idMeal: ""
                     }
                 ]
         }
@@ -39,25 +23,34 @@ export function FilterByCategory(props: any) {
     useEffect(() => {
 
         async function fetchData() {
-            const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood${result}`);
-            console.log(response);
 
-            const responseJson = await response.json();
-            console.log(responseJson);
-            setResult(responseJson);
+            if (SelectCategory) {
+
+                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${SelectCategory}`);
+                console.log(response);
+
+                const responseJson = await response.json();
+                console.log(responseJson);
+
+                setSelectCategory(responseJson);
+            }
         }
         fetchData();
 
     }, []);
 
-
     return (
-        <div>
-            <button id="btnSend" >SEND</button>
-        </div>
+        <div >
+            <form >
+                <input type="text" placeholder="choix" list="recettes" className="font-weight-bold text-info bg-secondary"></input>
 
+                <button type="submit" className="font-weight-bold text-info bg-secondary">valider</button>
+
+            </form>
+        </div>
     )
-};
+
+}
 
 
 

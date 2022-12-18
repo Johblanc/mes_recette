@@ -1,7 +1,8 @@
 h1 {
-    color:hsl(180, 33%, 99%);
-    background-color: rgba(30, 30, 30, 0.8);
-    border-radius: 10%;
+    color:rgba(245, 195, 145, 0.966);
+    background:rgba(11,10,10,1);
+    box-shadow:3px 3px 5px 2px rgba(117, 115, 115, 0.8);
+    border-radius:30px 30px 30px 30px;
     position:relative;
     text-align: center;
 }
@@ -9,9 +10,18 @@ h1 {
 nav {
 
     height: 50px;
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background:rgba(11,10,10,1);
+    box-shadow:3px 3px 5px 2px lightsalmon;
+    border-radius: 5px 5px 5px 5px;;
+          
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+a:hover {
+    color:#279f13;
 }
 
 .liste {
@@ -32,15 +42,15 @@ nav {
     cursor: pointer;
 }
 
-.btn {
+button {
     display:none;
-    justify-content: flex-end;
+   
+ 
 
 
 }
 
-@media screen and(max-width:500px){
-
+@media screen and (max-width:500px){
     .liste{
         
         flex-direction: column;
@@ -59,11 +69,12 @@ nav {
         line-height: 50px;
     }
 
-    .btn{
+    button{
+        border-radius: 50%;
         display: block;
         position: absolute;
         right: 10px;
-        top: 10px;
+        top:0px;
         color:rgb(24, 25, 24);
         cursor:pointer;
     }
