@@ -6,7 +6,7 @@ import './NavBar.css';
 
 export function NavBar() {
 
-    const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState(true);
     const [largeur, setLargeur] = useState(window.innerWidth);
     const toggleNavSmallScreen = () => {
         console.log("bouton test", toggleMenu);
@@ -36,8 +36,8 @@ export function NavBar() {
                     <ul className="liste">
                         <li className="items"><a href ="#Accueil">Accueil</a></li>
                         <li className="items"><a href ="#Nom">Nom</a></li>
-                        <li className="items"><a href ="#Catégorie">Catégorie</a></li>
-                        <li className="items"><a href ="#Ingrédient">Ingrédient</a></li>
+                        <li className="items"><a href ="#Categorie">Catégorie</a></li>
+                        <li className="items"><a href ="#Ingredient">Ingrédient</a></li>
                         <li className="items"><a href ="#Favoris">Favoris</a></li>
                     </ul>
                 )}

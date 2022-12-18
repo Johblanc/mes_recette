@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { Accueil } from './components/acceuilPage/acceuil';
 import { RechercheNom } from './components/Nom/rechercheNom';
 import { Category } from './components/categorie/AllCategories';
+import { Favoris } from './components/favoris/Favoris';
 
 function App() {
   const [primePage, setPrimePage] = useState(false)

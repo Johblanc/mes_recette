@@ -47,7 +47,7 @@ export function RechercheNom(props: any) {
 
     };
     return (
-        <div >
+        <div id="Nom">
             <form onSubmit={onNameValidate} className="nom-form">
                 <input type="text" placeholder="saisir nom" list="recettes" onChange={onNameChange} className="nom-input"></input>
                 <datalist id="recettes">

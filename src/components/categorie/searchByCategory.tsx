@@ -40,7 +40,7 @@ export function FilterByCategory() {
     }, []);
 
     return (
-        <div >
+        <div id='Categorie' >
             <form >
                 <input type="text" placeholder="choix" list="recettes" className="font-weight-bold text-info bg-secondary"></input>
 

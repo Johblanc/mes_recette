@@ -1,5 +1,10 @@
+:root{
+    --color-clair:rgb(245, 195, 145)
+}
+
+
 h1 {
-    color:rgba(245, 195, 145, 0.966);
+    color:var(--color-clair);
     background:rgba(11,10,10,1);
     box-shadow:3px 3px 5px 2px rgba(117, 115, 115, 0.8);
     border-radius:30px 30px 30px 30px;
@@ -60,8 +65,8 @@ a:hover {
         border-bottom: 1px solid #fff;
         line-height: 50px;
     }
-/*  
-    button{
+  
+    .btn{
         border-radius: 50%;
         display: block;
         position: absolute;
@@ -70,5 +75,5 @@ a:hover {
         color:rgb(24, 25, 24);
         cursor:pointer; 
     }
-     */
+     
 }

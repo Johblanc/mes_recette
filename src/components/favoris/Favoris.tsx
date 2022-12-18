@@ -15,7 +15,7 @@ export function Favoris(){ //Fonction JSX classique
     )
     
     return (
-        <div>
+        <div id="Favoris">
             {affichageFavoris}
         </div>
 

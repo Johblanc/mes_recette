@@ -31,14 +31,14 @@ export function SearchByIngredients(){
 
     }
     return (
-        <div>
-            <form onSubmit={onNameValidate}>
-                <input type="text" placeholder="saisir un ingedient" list="recettes" onChange={onNameChange} />
+        <div id="Ingredient">
+            <form onSubmit={onNameValidate} className="nom-form">
+                <input type="text" className="nom-input" placeholder="saisir un ingedient" list="recettes" onChange={onNameChange} />
                 <datalist id="recettes">
                     {dataAPI.meals?.map((item, i) => <option key={i}> {item.strMeal}</option>)}
 
                 </datalist>
-                <button type="submit">valider</button>
+                <button type="submit" className="nom-button">valider</button>
             </form>
         </div>
     )
