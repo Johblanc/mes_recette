@@ -1,4 +1,4 @@
-import { Category } from './components/categorie/AllCategories';
+
 import './App.css';
 import { SearchByIngredients } from './components/ingredients/SearchByIngredients';
 import './customs/maquette/maquette.css';
@@ -8,6 +8,8 @@ import { FilterByCategory } from './components/categorie/searchByCategory';
 import { useState } from 'react';
 import { Accueil } from './components/acceuilPage/acceuil';
 import { RechercheNom } from './components/Nom/RechercheNom';
+import { Category } from './components/categorie/AllCategories';
+
 function App() {
   const [primePage, setPrimePage] = useState(false)
   
@@ -29,12 +31,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
 
 
 

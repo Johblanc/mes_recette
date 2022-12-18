@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './NavBar.css';
 
 
+
+
 export function NavBar() {
 
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -27,18 +29,16 @@ export function NavBar() {
 
     return (
         <div>
-            <h1>Titre
-            <button onClick={toggleNavSmallScreen} className="">BTN</button>
-            </h1>
-
+            <h1>Mes Recettes</h1>
+            <button onClick={toggleNavSmallScreen} className="btn" >BTN</button>
             <nav>
                 {toggleMenu && (
                     <ul className="liste">
-                        <li className="items">Accueil</li>
-                        <li className="items">Nom</li>
-                        <li className="items">Catégorie</li>
-                        <li className="items">Ingrédient</li>
-                        <li className="items">Favoris</li>
+                        <li className="items"><a href ="#Accueil">Accueil</a></li>
+                        <li className="items"><a href ="#Nom">Nom</a></li>
+                        <li className="items"><a href ="#Catégorie">Catégorie</a></li>
+                        <li className="items"><a href ="#Ingrédient">Ingrédient</a></li>
+                        <li className="items"><a href ="#Favoris">Favoris</a></li>
                     </ul>
                 )}
                 

@@ -6,8 +6,8 @@ export function NameId(props: { id: string }) {
     if (nameId) {
         const [dataAPI, setDataAPI] = useState(requestZero.meals);
         useEffect(() => {
-            async function fetchData() {
-                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${props.id}`);
+            async function fetchData() {// Laure dit:adresse pour modif par id: www.themealdb.com/api/json/v1/1/lookup.php?i=(52772)/remplacement search par lookup
+                const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.id}`);
                 const responseJson = await response.json();
                 setDataAPI(responseJson.meals);
             }

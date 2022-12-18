@@ -1,10 +1,8 @@
-
 import { TOriginalRequestCat } from "../../Types/OriginalCat";
 
+export const choixUtilisateur:TOriginalRequestCat = {
 
-export const choixUtilisateur: TOriginalRequestCat = {
-
-    category:
+    categories:
     [{
 
     idCategory: "",
