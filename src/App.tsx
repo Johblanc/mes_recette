@@ -32,10 +32,4 @@ export default App;
 
 
 
-
-
-
-
-
-
 /*InfoBox data={MAQUETTE}*/
