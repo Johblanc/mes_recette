@@ -42,14 +42,6 @@ a:hover {
     cursor: pointer;
 }
 
-button {
-    display:none;
-   
- 
-
-
-}
-
 @media screen and (max-width:500px){
     .liste{
         
@@ -68,7 +60,7 @@ button {
         border-bottom: 1px solid #fff;
         line-height: 50px;
     }
-
+/*  
     button{
         border-radius: 50%;
         display: block;
@@ -76,7 +68,7 @@ button {
         right: 10px;
         top:0px;
         color:rgb(24, 25, 24);
-        cursor:pointer;
+        cursor:pointer; 
     }
-    
+     */
 }

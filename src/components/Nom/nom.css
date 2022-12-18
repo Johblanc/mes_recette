@@ -1,0 +1,18 @@
+.nom-form{
+    background: color #f00;
+    padding: 15px;
+}
+
+.nom-input{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.nom-button{
+    background-color: #00f;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20px;
+    
+}
