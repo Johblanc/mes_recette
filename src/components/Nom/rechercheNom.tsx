@@ -6,7 +6,7 @@ import { requestZero } from "./requestZero";
 
 export function RechercheNom(props: any) {
     const [dataAPI, setDataAPI] = useState(requestZero);
-    const [firstLetter, setFirstletter] = useState("a");
+    const [firstLetter, setFirstletter] = useState("");
     const [currentMeal, setCurrentMeal] = useState("");
     const [currentId, setCurrentId] = useState("");
     const [tempMeal, setTempMeal] = useState("");
